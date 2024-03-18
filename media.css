@@ -1,0 +1,78 @@
+/* Адаптация заголовка и подвала для маленьких экранов */
+@media (max-width: 767px) {
+    header {
+      
+    }
+
+    header .nav img{
+        height: 100%;
+        width: 90px;
+    }
+
+    .webSiteName{
+      font-size: 30px;
+      width: 24%;
+    }
+
+    .menu{
+     width: 30%;
+    }
+
+    .menu li a{
+      font-size: 25px;
+    }
+
+    .phone{
+      font-size: 14px;
+      margin: 0px;
+    }
+  
+    .footerMenu li a{
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+  }
+  
+  /* Адаптация заголовка и подвала для средних экранов */
+  @media (min-width: 767px) and (max-width: 1023px) {
+    header {
+      
+    }
+
+    header .nav img{
+        width: 110px;
+    }
+
+    .webSiteName{
+      font-size: 35px;
+      width: 26%;
+      margin-right: 4%;
+    }
+
+    .menu{
+      width: 27%;
+    }
+
+    .menu li a{
+      font-size: 30px;
+    }
+
+    .phone{
+      font-size: 15px;
+      margin-left: 10%;
+    }
+  
+    .footerMenu li a{
+      margin-right: 40px;
+      margin-left: 40px;
+      font-size: 20px;
+    }
+  }
+  
+  /* Адаптация заголовка и подвала для больших экранов */
+  @media (min-width: 1023px) {
+
+  
+  
+}
