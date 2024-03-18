@@ -1,1 +1,29 @@
-hello world
+body {
+    margin: 0;
+}
+
+header {
+    background: green; /* Установка фона для header */
+    height: 100px;
+    padding-top: 1px;
+}
+
+main{
+    padding-top: 1px;
+    background-color: blue;
+
+    position: absolute;
+    top: 101px; /* Высота header + 1px отступ */
+    bottom: 1px; /* 1px отступ для footer */
+    left: 0;
+    right: 0;
+}
+
+footer{
+    padding-top: 1px;
+    background-color: yellow;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
