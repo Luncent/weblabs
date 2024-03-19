@@ -98,3 +98,103 @@ footer{
 .footerWebSiteName{
   font-size: 22px;
 }
+
+.commentsBox{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  min-height: 300px;
+  height: auto;
+  background-color: hsl(218, 39%, 90%)  ;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.commentExample{
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100px;
+  height: auto;
+  font-size: 18px;
+}
+
+.strDateRating{
+  display: flex;
+  margin-left: 10px;
+}
+
+.commentDate{
+  font-size: 18px;
+}
+
+.commentItself{
+  margin-top: -20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.rating {
+  font-size: 0; /* Устанавливаем размер шрифта в 0, чтобы символы не отображались */
+}
+
+.star {
+  display: inline-block;
+  width: 30px; /* Устанавливаем ширину звездочки */
+  height: 30px; /* Устанавливаем высоту звездочки */
+  color: rgb(52, 8, 101); /* Цвет звездочки */
+  unicode-bidi: bidi-override;
+  font-size: 30px; /* Устанавливаем размер шрифта для символа звездочки */
+  margin-right: 5px; /* Отступ между звездочками */
+}
+
+.star:before {
+  content: "\2605"; /* Юникод символа звездочки */
+}
+
+.commentForm{
+  width: 90%;
+  height: 190px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+
+.newComment{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 889px;
+  font-size: 18px;
+}
+
+.btnAddArea{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnAddComment{
+  width: 220px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 5px;
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btnAddComment:hover {
+  background-color: red;
+}
