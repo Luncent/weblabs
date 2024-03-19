@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding-top: 70px;
+    background-image: url("images/background.jpg");
+    opacity: 0.99;
 }
 
 header {
@@ -10,7 +12,7 @@ header {
     right: 0px;
 
     border-bottom: 2px solid #cac4c4;
-    background-color: white;
+    background-color: hsl(218, 39%, 90%);
     height: 70px;
 }
 
@@ -66,6 +68,7 @@ footer{
     border-top: 2px solid #cac4c4;
     margin-top: -14px;
     height: 130px;
+    background-color: hsl(218, 39%, 90%);
 }
 
 .footerWebSiteName, .rights{
