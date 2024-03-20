@@ -1,5 +1,5 @@
-.container {
-    /* max-width: 1200px; */
+/* .container {
+    /* max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
 }
@@ -8,7 +8,23 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
+} */
+
+table{
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+    empty-cells: hide;
+    table-layout: auto;
 }
+th{
+    border: 1px saddlebrown;
+}
+th, td {
+    width: 400px;
+ }
+
+
 
 .news-item {
     border: 1px solid #ccc;
