@@ -1,6 +1,6 @@
+
 .news-grid {
     display: grid;
-    width: fit-content;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
@@ -8,10 +8,12 @@
 }
 
 .news-item {
-    background-color: #f8d9d9;
+    background-color: bisque;;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(136, 12, 12, 0.1);
+    background-size: cover;
+    background-position: center;
 }
 
 .news-item h2 {
@@ -59,12 +61,17 @@
     text-decoration: underline;
 }
 
+.news-item img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
 
-
-.recipe-form {
+/* .recipe-form {
    width: 100%;
    height: 600px;
-  /* background-color: aqua;*/
+   background-color: aqua;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -84,27 +91,23 @@
     margin-top: 15px;
     width: 90%;
     height: 160px;
-   /* background-color: yellow;*/
     display: flex;
 }
 
 .name_ShortDiscription{
     height: 100%;
     width: 50%;
-   /* background-color: bisque;*/
     align-items: center;
 }
 
 .pictureSpace{
     height: 100%;
     width: 50%;
-    /*background-color: green;*/
 }
 
 .recipeNameBox{
     height: 40%;
     width: 100%;
-   /* background-color:aquamarine;*/
 }
 
 .recipeNameBox label{
@@ -120,7 +123,6 @@
 .shortDiscription{
     height: 60%;
     width: 100%;
-   /* background-color:brown;*/
 }
 
 .shortDiscription label{
@@ -143,7 +145,6 @@
 }
 
 .dropAreaBox{
-    /*background-color:aqua;*/
     width: 100%;
     height: 65%;
     display: flex;
@@ -202,4 +203,4 @@
 
 .btn:hover {
     background-color: red;
-}
+} */
