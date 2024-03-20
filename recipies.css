@@ -1,0 +1,268 @@
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: bisque;
+    transition: box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+.news-item:hover {
+    box-shadow: 0 0 10px black; /* задаем тень при наведении */
+}
+
+.news-item img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-item h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    margin-bottom: 0;
+}
+
+
+
+
+.recipe-form {
+   width: 100%;
+   height: 600px;
+  /* background-color: aqua;*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-group{
+    width: 60%;
+    height: 405px;
+    background-color:hsl(218, 39%, 90%);
+    box-shadow:6px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.firstLine{
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 90%;
+    height: 160px;
+   /* background-color: yellow;*/
+    display: flex;
+}
+
+.name_ShortDiscription{
+    height: 100%;
+    width: 50%;
+   /* background-color: bisque;*/
+    align-items: center;
+}
+
+.pictureSpace{
+    height: 100%;
+    width: 50%;
+    /*background-color: green;*/
+}
+
+.recipeNameBox{
+    height: 40%;
+    width: 100%;
+   /* background-color:aquamarine;*/
+}
+
+.recipeNameBox label{
+    font-size: 25px;
+}
+
+.recipeNameBox input{
+    font-size: 17px;
+    width: 80%;
+}
+
+
+.shortDiscription{
+    height: 60%;
+    width: 100%;
+   /* background-color:brown;*/
+}
+
+.shortDiscription label{
+    font-size: 25px;
+}
+
+.shortDiscription textarea{
+    font-size: 15px;
+    width: 80%;
+}
+
+.pictureSpace{
+    text-align: center;
+}
+
+.labelPicture{
+    margin: 0;
+    font-size: 25px;
+    height: 35%;
+}
+
+.dropAreaBox{
+    /*background-color:aqua;*/
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropArea{
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+.secondLine{
+    margin: 0 auto;
+    margin-top: 10px;
+    width:90%;
+    height: 150px;
+    background-color:hsl(218, 39%, 90%);
+}
+
+
+.secondLine label{
+    font-size: 25px;
+}
+
+.secondLine textarea{
+    font-size: 15px;
+    width:99%;
+}
+
+.btnSpace{
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: red;
+}
+
+
+
+
+/* Стили для блока рецепта */
+.recipe {
+    max-width: 75%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+
+.recipe h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */}
+
+.ingredients, .instructions {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ingredients h2, .instructions h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ingredients ul, .instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients ul li, .instructions ul li {
+    margin-bottom: 10px;
+}
+
+.ingredients ul li, .instructions ul li {
+    display: flex;
+    align-items: center;
+}
+
+.ingredients ul li .name, .ingredients ul li .value, .ingredients ul li .type,
+.instructions ul li .name, .instructions ul li .value, .instructions ul li .type {
+    margin-right: 5px;
+}
+
+.instructions-lst li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.instructions-lst li .hdr {
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.instructions-lst li .desc {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.recipe-photo {
+    text-align: center;
+}
+
+.recipe-photo img {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
