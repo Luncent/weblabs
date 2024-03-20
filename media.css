@@ -15,22 +15,55 @@
     }
 
     .menu{
-     width: 30%;
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 55%;
+      width: 33%;
+      background-color:hsl(218, 39%, 90%);
+      border-radius: 3px;
+      border: 2px solid black;
     }
 
     .menu li a{
       font-size: 25px;
+      
     }
 
     .phone{
       font-size: 14px;
-      margin: 0px;
+      margin: 0 auto;
+      width: 100%;
     }
   
     .footerMenu li a{
         margin-right: 20px;
         margin-left: 20px;
         font-size: 18px;
+    }
+
+    [for=burger]{
+      display: block;
+      width: 30px;
+      font-size: 25px;
+      position: fixed;
+      right: 3%;
+
+    }
+
+    .nav ul{
+      display: none;
+    }
+
+    #burger:checked + label + ul{
+      display: block;
+    }
+
+    .menu li{
+      margin: 0 auto;
+      margin-left: 8%;
+      display: block;
+      width: 100%;
     }
   }
   
@@ -40,6 +73,10 @@
       
     }
 
+    #burger, [for=burger]{
+      display: none;
+    }
+
     header .nav img{
         width: 110px;
     }
@@ -47,20 +84,27 @@
     .webSiteName{
       font-size: 35px;
       width: 26%;
-      margin-right: 4%;
+      margin-right: 0;
     }
 
     .menu{
-      width: 27%;
+      width: 84%;
     }
 
     .menu li a{
-      font-size: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+    
+      width: 33%;
+      margin-left: 10%;
+      margin-right: 0;
+      font-size: 19px;
     }
 
     .phone{
-      font-size: 15px;
-      margin-left: 10%;
+      margin-top: 15px;
+      font-size: 12px;
+      margin-left: 0%;
     }
   
     .footerMenu li a{
@@ -68,11 +112,23 @@
       margin-left: 40px;
       font-size: 20px;
     }
+
+    #burger, [for=burger]{
+      display: none;
+    }
   }
   
   /* Адаптация заголовка и подвала для больших экранов */
   @media (min-width: 1023px) {
 
-  
-  
+    #burger, [for=burger]{
+      display: none;
+    }
+    
+    .menu li a{
+      text-transform: uppercase;
+      text-decoration: none;
+      
+      font-size: 25px;
+    }
 }
