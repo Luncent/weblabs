@@ -8,7 +8,7 @@
         <link href="recipies.css" rel="stylesheet"/>
         <link rel="stylesheet" href="news.css">
         <title>News</title>
-        <script src="файл.js"></script>
+        <script src="news.js"></script>
     </head>
     <body>
         <header>
@@ -38,8 +38,9 @@
     
         <main>
             <!-- Здесь разместите основное содержимое страницы -->
-            <div class="news-grid">
+            <div class="news-grid" id="newsContainer">
                 <div class="news-item" >
+                    <div class="date">20.12.2023 18:45</div>
                     <img src="https://kedem.ru/photo/news/2024/03/small/nphoto1710163330.jpg" >
                         <div class="news-content">
                         <h3>В ресторане готовят необыкновенные суши из растений и грибов</h3>
@@ -47,6 +48,7 @@
                     </div>
                 </div>
                 <div class="news-item">
+                    <div class="date">20.12.2023 18:45</div>
                     <img src="https://kedem.ru/photo/news/2024/03/small/nphoto1710403158.jpg" >
                     <div class="news-content">
                     <h3>Съедено рекордное количество блюд от шеф-поваров, отмеченных звездой Мишлен</h3>
@@ -54,6 +56,7 @@
                     </div>
                 </div>
                 <div class="news-item">
+                    <div class="date">20.12.2023 18:45</div>
                     <img src="https://kedem.ru/photo/news/2024/03/small/nphoto1710486024.jpg" >
                     <div class="news-content">
                     <h3>Компания выпустила новые печи, которые приготовят пиццу за 1 минуту</h3>
@@ -61,6 +64,7 @@
                     </div>
                 </div>
                 <div class="news-item">
+                    <div class="date">20.12.2023 18:45</div>
                     <img src="https://kedem.ru/photo/news/2024/03/small/nphoto1710923899.jpg" >
                     <div class="news-content">
                     <h3>Производитель чугунной посуды выпустил сковороду в форме гитары</h3>
@@ -69,36 +73,33 @@
                 </div>
             </div>
 
-            <form class="addNews-form">
+            <form class="addNews-form" action="" id="formAddNews">
                 <div class="newsForm-group">
                     <div class="firstLine">
                         <div class="name_ShortDiscription">
                             <div class="recipeNameBox">
-                                <label for="myInput">Название новости</label><br>
-                                <input type="text" id="myInput" name="myInput">
+                                <label for="myInput">Ссылка на новость</label><br>
+                                <input type="text" id="newsLinkID" name="newsLinkName">
                             </div>
                             <div class="shortDiscription">
                                 <label for="description">Краткое описание</label><br>
-                                <textarea id="description" name="descrptn" rows="3" required></textarea>
+                                <textarea id="shortDescrID" name="shortDescName" rows="3" required></textarea>
                             </div>
                         </div>
                         <div class="pictureSpace">
-                            <p class="labelPicture">Область для файла с изображением</p>
+                            <p class="labelPicture">Введите ссылку на изображение</p>
                             <div class="dropAreaBox">
                                 <div class="dropArea">
-    
+                                    <textarea id="newsImgID" name="newsImgName" rows="3" required></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="newsSecondLine">
-                        <label for="description">Ссылка на новость</label><br>
-                        <textarea id="description" name="descrptn" rows="1" required></textarea>
-                    </div>
+                    
+                    <input type="datetime" id="DateID" name="DateName" hidden>
 
                     <div class="btnSpace">
-                        <button class="btn">Добавить новость</button>
+                        <button class="btn" id="btnAddNews">Добавить новость</button>
                     </div>
                     
                 </div>
