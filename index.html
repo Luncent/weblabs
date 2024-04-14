@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet"/>
         <link href="media.css" rel="stylesheet"/>
+        <link href="recipies.css" rel="stylesheet"/>
         <link rel="stylesheet" href="news.css">
         <title>News</title>
         <script src="файл.js"></script>
@@ -68,7 +69,40 @@
                 </div>
             </div>
 
+            <form class="addNews-form">
+                <div class="newsForm-group">
+                    <div class="firstLine">
+                        <div class="name_ShortDiscription">
+                            <div class="recipeNameBox">
+                                <label for="myInput">Название новости</label><br>
+                                <input type="text" id="myInput" name="myInput">
+                            </div>
+                            <div class="shortDiscription">
+                                <label for="description">Краткое описание</label><br>
+                                <textarea id="description" name="descrptn" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="pictureSpace">
+                            <p class="labelPicture">Область для файла с изображением</p>
+                            <div class="dropAreaBox">
+                                <div class="dropArea">
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="newsSecondLine">
+                        <label for="description">Ссылка на новость</label><br>
+                        <textarea id="description" name="descrptn" rows="1" required></textarea>
+                    </div>
+
+                    <div class="btnSpace">
+                        <button class="btn">Добавить новость</button>
+                    </div>
+                    
+                </div>
+            </form>
            
 
         </main>

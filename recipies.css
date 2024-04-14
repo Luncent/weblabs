@@ -12,32 +12,37 @@
 
 table{
     width: auto;
-    border-collapse: separate;
-    border-spacing: 10px 10px;
+    border-collapse:separate;
+    border-spacing: 10px;
     empty-cells: hide;
     table-layout: auto;
+    margin-top: 0px;
 }
 th{
     border: 1px saddlebrown;
 }
 th, td {
     width: 400px;
+    background-color: bisque;
+    
  }
-
+img
+{
+    height:200px;
+    width:300px;
+}
 
 
 .news-item {
-    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    background-color: bisque;
-    transition: box-shadow 0.3s ease;
+    /*transition: box-shadow 0.3s ease;*/
     background-size: cover;
     background-position: center;
 }
-.news-item:hover {
-    box-shadow: 0 0 10px black; /* задаем тень при наведении */
-}
+/*.news-item:hover {
+    box-shadow: 0 0 10px black; /* задаем тень при наведении 
+}*/
 
 .news-item img {
     width: 100%;
@@ -67,9 +72,27 @@ th, td {
    align-items: center;
 }
 
+.addNews-form {
+    width: 100%;
+    height: 600px;
+   /* background-color: aqua;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
 .form-group{
     width: 60%;
     height: 405px;
+    background-color:hsl(218, 39%, 90%);
+    box-shadow:6px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.newsForm-group{
+    width: 60%;
+    height: 320px;
     background-color:hsl(218, 39%, 90%);
     box-shadow:6px 6px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
@@ -164,12 +187,29 @@ th, td {
     background-color:hsl(218, 39%, 90%);
 }
 
+.newsSecondLine{
+    margin: 0 auto;
+    margin-top: 10px;
+    width:90%;
+    height: 60px;
+    background-color:hsl(218, 39%, 90%);
+}
+
 
 .secondLine label{
     font-size: 25px;
 }
 
+.newsSecondLine label{
+    font-size: 25px;
+}
+
 .secondLine textarea{
+    font-size: 15px;
+    width:99%;
+}
+
+.newsSecondLine textarea{
     font-size: 15px;
     width:99%;
 }
