@@ -2,6 +2,15 @@
 далее при нажатии на кнопку этот элемент будет добавлятся в список*/
 const LS = localStorage;
 
+function deleteNews(index) {
+    console.log("Удаление элемента  i="+index);
+    var storedNews = JSON.parse(LS.getItem('news')) || [];
+    storedNews.splice(index, 1); // Удаляем элемент из массива
+
+    LS.setItem('news', JSON.stringify(storedNews));
+    displayNews(); // Обновляем отображение после удаления
+}
+
 function getCurrentDateTime() {
     var currentDateTime = new Date();
   
@@ -29,10 +38,11 @@ function getCurrentDateTime() {
     var newsContainer = document.getElementById('newsContainer');
     newsContainer.innerHTML = ''; // Очищаем контейнер перед заполнением
 
-    storedNews.forEach(function(news) {
+    storedNews.forEach(function(news, i) {
         var newsItem = document.createElement('div');
         newsItem.className = 'news-item';
 
+        
         var newsHTML = `
             <div class="date">${news.DateName}</div>
             <img src="${news.newsImgName}">
@@ -40,10 +50,21 @@ function getCurrentDateTime() {
                 <h3>${news.shortDescName}</h3>
                 <a href="${news.newsLinkName}">Подробнее</a>
             </div>
+            <div class="newsBtns">
+                <button class="delete-button" id="deleteBtn" element-index="`+i+`">Удалить</button>
+                <button class="update-button" id="updateBtn" element-index="`+i+`">Изменить</button>
+            </div>
         `;
 
         newsItem.innerHTML = newsHTML;
         newsContainer.appendChild(newsItem);
+
+        var deleteButton = newsItem.querySelector(".delete-button");
+        deleteButton.addEventListener('click', function() {
+            deleteNews(i);
+            console.log("Добавление слушателя для i="+i);
+        });
+
     });
 }
 

@@ -74,3 +74,12 @@
     background-position: center;
 }
 
+.newsBtns{
+    display: flex;
+    align-items: center;
+}
+
+.newsBtns button{
+    margin-right: 50px;
+}
+
