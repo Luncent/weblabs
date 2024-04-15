@@ -8,6 +8,7 @@
         <link href="recipies.css" rel="stylesheet"/>
         <link rel="stylesheet" href="news.css">
         <title>News</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
         <script src="news.js"></script>
     </head>
     <body>
@@ -34,8 +35,32 @@
                 </ul>
                 
             </div>
+
+            
         </header>
-    
+        
+        <div class="sort-form-container">
+            <div class="sort-form-wrapper">
+              <input type="text" id="searchField">
+              <button id="searchButton">Поиск</button>
+              <input type="date" id="datePicker">
+              <input type="time" id="timePicker">
+              <button id="sortButton">Сортировать</button>
+              <button id="cancelBtn">Сброс</button>
+            </div>
+        </div>
+
+        <div id="modal" class="modal" data-index="">
+            <div class="modal-content">
+              <h3>Введите измененные данные</h3>
+              <input type="text" id="input1" placeholder="Название">
+              <input type="text" id="input2" placeholder="Ссылка на изображение">
+              <input type="text" id="input3" placeholder="Ссылка на новость">
+              <button id="confirmBtn">Подтвердить</button>
+              <button id="cancelBtn">Отмена</button>
+            </div>
+          </div>
+
         <main>
             <!-- Здесь разместите основное содержимое страницы -->
             <div class="news-grid" id="newsContainer">
@@ -47,8 +72,8 @@
                         <a href="https://kedem.ru/news/?ysclid=ltztawcyu9195966633">Подробнее</a>
                     </div>
                     <div class="newsBtns">
-                        <button class="delete-button" id="deleteBtn" element-index="">Удалить</button>
-                        <button class="update-button" id="updateBtn" element-index="">Изменить</button>
+                        <button class="delete-button" id="deleteBtn" data-index="">Удалить</button>
+                        <button class="update-button" id="updateBtn" data-index="">Изменить</button>
                     </div>
                 </div>
             </div>
