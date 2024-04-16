@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="commBtns">
               <button class="update-button" id="updateBtn" data-index="">Изменить</button>
-              <button class="deleteCom-btn" id="deleteBtn" data-index="">Удалить</button>
+              <button class="deleteCom-btn" id="deleteBtn" data-index="`+i+`">Удалить</button>
             </div> 
           </div>
 
@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // Получаем кнопку "Удалить'
           var deleteButton = commentItem.querySelector('.deleteCom-btn');
-          deleteButton.addEventListener('click', function() {
-              deleteComment(i);
+          deleteButton.addEventListener('click', function(event) {
+              DeleteComment(i);
               console.log("Добавление слушателя для комментария "+i);
           });
 
@@ -171,29 +171,26 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    function deleteComment(index) {
+    function DeleteComment(index) {
+      console.log("Удаляю"+index);
       var deleteModal = document.getElementById('deleteModal');
       var modalConfirm = document.getElementById('modal-confirm');
       var modalCancel = document.getElementById('modal-cancel');
+      var storedComms = JSON.parse(localStorage.getItem('Comments')) || [];
     
       deleteModal.style.display = 'block';
     
       modalConfirm.addEventListener('click', function() {
         deleteModal.style.display = 'none';
-        performDelete(index);
+        storedComms.splice(index, 1);
+        
+        localStorage.setItem('Comments', JSON.stringify(storedComms));
+        displayComms();
       });
     
       modalCancel.addEventListener('click', function() {
         deleteModal.style.display = 'none';
       });
-    
-      function performDelete(index) {
-        var storedComms = JSON.parse(localStorage.getItem('Comments')) || [];
-        storedComms.splice(index, 1);
-    
-        localStorage.setItem('Comments', JSON.stringify(storedComms));
-        displayComms();
-      }
     }  
 
     displayComms();
