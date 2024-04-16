@@ -135,8 +135,27 @@ footer{
   margin-left: 10px;
 }
 
+.DateRating{
+  align-items: center;
+  display: flex;
+  margin-left: 10px;
+}
+
 .commentDate{
   font-size: 18px;
+}
+
+.commBtns{
+  display: flex;
+  margin-left: 290px;
+}
+
+.commBtns button{
+  margin-left: 20px;
+  height: 50%;
+  font-size: 14px;
+  background-color: aquamarine;
+  border-radius: 10px;
 }
 
 .commentItself{
@@ -147,6 +166,12 @@ footer{
 
 .rating {
   font-size: 0; /* Устанавливаем размер шрифта в 0, чтобы символы не отображались */
+  cursor: pointer;
+}
+
+.comRating {
+  font-size: 0; /* Устанавливаем размер шрифта в 0, чтобы символы не отображались */
+  margin-bottom: 25px;
 }
 
 .star {
@@ -157,15 +182,65 @@ footer{
   unicode-bidi: bidi-override;
   font-size: 30px; /* Устанавливаем размер шрифта для символа звездочки */
   margin-right: 5px; /* Отступ между звездочками */
+  cursor: pointer;
+}
+
+.starEdit {
+  display: inline-block;
+  width: 30px; /* Устанавливаем ширину звездочки */
+  height: 30px; /* Устанавливаем высоту звездочки */
+  color: rgb(52, 8, 101); /* Цвет звездочки */
+  unicode-bidi: bidi-override;
+  font-size: 30px; /* Устанавливаем размер шрифта для символа звездочки */
+  margin-right: 5px; /* Отступ между звездочками */
+  cursor: pointer;
+}
+
+.comStar {
+  display: inline-block;
+  width: 30px; /* Устанавливаем ширину звездочки */
+  height: 30px; /* Устанавливаем высоту звездочки */
+  color: rgb(52, 8, 101); /* Цвет звездочки */
+  unicode-bidi: bidi-override;
+  font-size: 30px; /* Устанавливаем размер шрифта для символа звездочки */
+  margin-right: 5px; /* Отступ между звездочками */
+}
+
+.star.selected{
+  color: gold;
+}
+
+.starEdit.selected{
+  color: gold;
+}
+
+.comStar.selected{
+  color: gold;
+}
+
+.star-rating{
+  font-size: 0; /* Устанавливаем размер шрифта в 0, чтобы символы не отображались */
+}
+
+.star-rating #text{
+  display: none;
 }
 
 .star:before {
   content: "\2605"; /* Юникод символа звездочки */
 }
 
+.starEdit:before {
+  content: "\2605"; /* Юникод символа звездочки */
+}
+
+.comStar:before {
+  content: "\2605"; /* Юникод символа звездочки */
+}
+
 .commentForm{
   width: 90%;
-  height: 190px;
+  height: 220px;
   background-color: #fff;
   margin: 0 auto;
   margin-top: 30px;
@@ -212,4 +287,107 @@ footer{
 
 #burger, [for=burger]{
   display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+}
+
+.modal2 {
+  display: none; /* Начально скрываем модальное окно */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.modal-content2 {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень для добавления глубины */
+}
+
+.modal-content2 h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content2 label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-content2 textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content2 input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content2 .modal-buttons2 {
+  text-align: center;
+}
+
+.modal-content2 button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.modal-content2 button:hover {
+  background-color: #45a049;
+}
+
+.modal-content2 #edit-cancel {
+  background-color: #ccc;
+}
+
+.modal-content2 #edit-cancel:hover {
+  background-color: #b3b3b3;
 }

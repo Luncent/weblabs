@@ -7,7 +7,7 @@
         <link href="media.css" rel="stylesheet"/>
         <link rel="stylesheet" href="recipies.css">
         <title>News</title>
-        <script src="файл.js"></script>
+        <script src="cocreteRecipe.js"></script>
     </head>
     <body>
         <header>
@@ -34,7 +34,31 @@
                
             </div>
         </header>
-    
+        
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+              <p>Вы действительно хотите удалить этот комментарий?</p>
+              <div class="modal-buttons">
+                <button id="modal-confirm">Да</button>
+                <button id="modal-cancel">Нет</button>
+              </div>
+            </div>
+        </div>
+
+        <div id="editModal" class="modal2">
+            <div class="modal-content2">
+              <h2>Изменение комментария</h2>
+              <label for="editDescr">Текст комментария:</label>
+              <textarea id="editDescr" rows="4" cols="50"></textarea>
+              <label for="editRating">Оценка:</label>
+              <input id="editRating" type="number" min="0" max="5">
+              <div class="modal-buttons2">
+                <button id="edit-confirm">Сохранить</button>
+                <button id="edit-cancel">Отмена</button>
+              </div>
+            </div>
+        </div>
+
         <main>
             <section class="recipe">
                 <h1>Щи со свежей капустой</h1>
@@ -95,15 +119,20 @@
 
 
             <!-- Здесь разместите основное содержимое страницы -->
-           <div class="commentsBox">
+           <div class="commentsBox" >
+              <div class="comsContainer" id="commentContainer">
                 <div class="commentExample">
-                    <div class="strDateRating">
-                        <div class="rating">
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
+                    <div class="DateRating">
+                        <div class="commBtns">
+                            <button class="deleteCom-btn" id="deleteBtn" data-index="">Удалить</button>
+                            <button class="update-button" id="updateBtn" data-index="">Изменить</button>
+                        </div> 
+                        <div class="comRating">
+                            <span class="comStar"></span>
+                            <span class="comStar"></span>
+                            <span class="comStar"></span>
+                            <span class="comStar"></span>
+                            <span class="comStar"></span>
                         </div>
                         <div class="commentDate">
                             <p>20 марта 2024</p>
@@ -114,8 +143,9 @@
                         <p>Сегодня увидела рецепт и сразу решила попробовать. Вкусно, ум отъесть! Сливок не было, взбила белок с солью в крепкую пену. Пекла под крышкой. Это шедевр!</p>
                     </div>
                 </div>
+              </div>
 
-                <form class="commentForm">
+                <form class="commentForm" id="formComment" action="">
                     <div class="strDateRating">
                         <div class="rating">
                             <span class="star"></span>
@@ -124,10 +154,11 @@
                             <span class="star"></span>
                             <span class="star"></span>
                         </div>
+                        <input type="datetime" id="DateID" name="DateName" hidden>
                     </div>
-                    <textarea class="newComment" id="description" name="descrptn" rows="4" required></textarea>
+                    <textarea class="newComment" id="description" name="descr" rows="4" required></textarea>
                     <div class="btnAddArea">
-                        <button class="btnAddComment">Добавить отзыв</button>
+                        <button class="btnAddComment" id="addCom">Добавить отзыв</button>
                     </div>    
                     
                 </form>
